@@ -31,5 +31,6 @@ After you're done, push to the origin and send a pull request of the branch with
 - Use [Styled Components](https://styled-components.com/) to style your components.
 - Use microinterations like hover styles on images with smooth transitions but without using external libs. Be creative but without overcharging the website.
 - Change theme to dark an light with the Context API.
+- Use Typescript
 
 ## GLHF (Good Luck and Have Fun!)
