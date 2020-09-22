@@ -12,7 +12,7 @@ Fork the repository.
 Clone the repository.
 Checkout to the branch of your name.
 Commit your workflow, you can check this [article](https://medium.com/@rafael.oliveira/como-escrever-boas-mensagens-de-commit-9f8fe852155a).
-After you're done, send a pull request to the branch with your name.
+After you're done, push to the origin and send a pull request of the branch with your name.
 
 ## Skills Required
 
