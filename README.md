@@ -8,16 +8,16 @@ This test aims to test the candidate's knowledge regarding the technologies used
 
 ## Instructions
 
-Fork the repository
-Clone the repository
-Create a new branch with your name, ex: renato-lins
-Commit your workflow, you can check this [article](https://medium.com/@rafael.oliveira/como-escrever-boas-mensagens-de-commit-9f8fe852155a)
-After you're done, send a pull request to the branch with your name
+Fork the repository.
+Clone the repository.
+Checkout to the branch of your name.
+Commit your workflow, you can check this [article](https://medium.com/@rafael.oliveira/como-escrever-boas-mensagens-de-commit-9f8fe852155a).
+After you're done, send a pull request to the branch with your name.
 
 ## Skills Required
 
 - You have to use [React Js](https://pt-br.reactjs.org/)	as your framework.
-- The Product Cards must be a Component.
+- The Product Cards, Featured Cards and Menu Itens must be Components.
 - You have to use Grid Layout.
 - You have to use Flexbox.
 - All content needs to be consumed through the [Fake Store API](https://fakestoreapi.com/).
@@ -30,5 +30,6 @@ After you're done, send a pull request to the branch with your name
 - The details page must be a Server Side Rendered Page.
 - Use [Styled Components](https://styled-components.com/) to style your components.
 - Use microinterations like hover styles on images with smooth transitions but without using external libs. Be creative but without overcharging the website.
+- Change theme to dark an light with the Context API.
 
 ## GLHF (Good Luck and Have Fun!)
