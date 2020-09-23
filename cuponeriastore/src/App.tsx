@@ -2,13 +2,13 @@ import React from 'react';
 import './App.css';
 
 import GlobalStyles from './assets/styles/global';
-import Home from './pages/Home';
+import Routes from './routes';
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <Home />
+      <Routes />
     </>
   );
 }
