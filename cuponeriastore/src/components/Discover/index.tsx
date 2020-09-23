@@ -1,34 +1,39 @@
-import React from 'react';
-// import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import image1 from '../../assets/images/image1.png';
 
-import { DiscoverContainer, DiscoverContent } from './styles';
+import { DiscoverContent } from './styles';
+
+export interface DiscoverProducts {
+    category: string;
+    description: string;
+    id: number;
+    image: string;
+    price: number;
+    title: string;
+}
+
+interface DiscoverProductsProps {
+    product: DiscoverProducts;
+}
 
 
-const Discover: React.FC = () => {
+const Discover: React.FC<DiscoverProductsProps> = ({ product }) => {
+
+
     return (
         <>
-            <DiscoverContainer>
-                <DiscoverContent className="discover-content" bgContainer="rgba(200,118,118, 0.2)">
-                    <img src={image1} alt="" />
-                    <div className="discover-title">
-                        <h3>Solid Gold Petite Micropave</h3>
-                        <a href="#">Shop</a>
-                        <p>Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.</p>
-                    </div>
+            <DiscoverContent className="discover-content" bgContainer={product.id == 1 ? "rgba(200,118,118, 0.2)" : "rgba(63,127,203, 0.2)"}>
+                <img src={product.image} alt="" />
+                <div className="discover-title">
+                    <h3>{product.title}</h3>
+                    <Link to={`/single-product/${product.id}`} style={{backgroundColor: product.id == 1 ? '#EE797E' :  '#619CEB'}}>Shop</Link>
+                    <p>{product.description}</p>
+                </div>
 
-                </DiscoverContent>
-
-                <DiscoverContent className="discover-content" bgContainer="rgba(200,118,118, 0.2)">
-                    <img src={image1} alt="" />
-                    <div className="discover-title">
-                        <h3>Solid Gold Petite Micropave</h3>
-                        <a href="#">Shop</a>
-                        <p>Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.</p>
-                    </div>
-                </DiscoverContent>
-            </DiscoverContainer>
+            </DiscoverContent>
         </>
     );
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const DiscoverContainer = styled.div`
 
@@ -26,6 +27,11 @@ export const DiscoverContainer = styled.div`
             grid-template-columns: 1fr 3fr 0fr;
         }
 
+        img {
+            width: 256px;
+            height: 256px;
+        }
+
         .discover-title {
             display: flex;
             align-items: center;
@@ -43,14 +49,17 @@ export const DiscoverContainer = styled.div`
             font: 700 1.37rem Roboto;
             color: var(--color-text-black);
             margin-bottom: 2.93rem;
+            text-align: center;
             
             @media(min-width: 1100px) {
+                width: 390px;
+                text-align: left;
                 margin-bottom: 0;
             }
         }
     
         a {
-            background-color: #EE797E;
+            // background-color: #ee0;
             width: 7.68rem;
             height: 3.31rem;
             display: flex;
@@ -75,10 +84,11 @@ export const DiscoverContainer = styled.div`
                 margin-top: 1.1rem;
             }
         }
-
-
     }
 
+`;
+
+export const LinkTo = styled(Link)<{ bgColor: string }> `
 `;
 
 export const DiscoverContent = styled.div<{ bgContainer: string }> `

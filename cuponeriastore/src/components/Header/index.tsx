@@ -8,7 +8,7 @@ interface Category {
     category: string;
 }
 
-const Header: React.FC = (props) => {
+const Header: React.FC = () => {
 
     const [categorys, setCategorys] = useState<string[]>([]);
 
@@ -19,7 +19,7 @@ const Header: React.FC = (props) => {
                 var newCategory = categoryData.filter((este, i) => categoryData.indexOf(este) === i);
                 setCategorys(newCategory);
             });
-    }, [])
+    }, []);
 
     return (
         <Menu>
