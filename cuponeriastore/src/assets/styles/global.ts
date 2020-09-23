@@ -13,6 +13,7 @@ export default createGlobalStyle`
     --color-text-black: #000000;
     --color-shadow: rgba(23, 29, 41, 0.12);
     --color-bg-badge: #FF0000;
+    --color-text-paragraph: #A8A4A4;
 }
 
 * {
