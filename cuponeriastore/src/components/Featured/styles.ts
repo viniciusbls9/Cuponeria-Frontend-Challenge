@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FeaturedContainer = styled.div `
     display: flex;
     flex-direction: row;
-    overflow-x: auto;
+    overflow-x: scroll;
 
     &::-webkit-scrollbar-track {
         background-color: var(--color-background-yellow);
@@ -32,6 +32,10 @@ export const FeaturedContainer = styled.div `
         background-color: #fff;
         margin-right: 1.7rem;
         margin-bottom: 1.7rem;
+
+        @media(min-width: 1100px) {
+            max-width: 15.75rem;
+        }
     }
 
     .card-container:first-of-type {
@@ -45,10 +49,15 @@ export const FeaturedContainer = styled.div `
     .card-white {
         background-color: var(--color-background-white);
         margin-right: 0.9rem;
+        cursor: pointer;
     }
 
     .card-white img {
         padding: 10px;
+
+        @media(min-width: 1100px) {
+            max-width: 100%;
+        }
     }
 
     .badge-price {
