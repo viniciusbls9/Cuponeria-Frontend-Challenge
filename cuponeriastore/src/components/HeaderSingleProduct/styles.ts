@@ -34,7 +34,7 @@ export const Menu = styled.header`
     }
 
     .header-buttons {
-        padding: 4.3rem 0 1.45rem 0;
+        padding: 3.3rem 0 1.45rem 0;
         padding-left: 1.87rem;
         display: flex;
 
