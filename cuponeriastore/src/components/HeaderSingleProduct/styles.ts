@@ -36,10 +36,7 @@ export const Menu = styled.header`
     .header-buttons {
         padding: 4.3rem 0 1.45rem 0;
         padding-left: 1.87rem;
-        overflow-x: scroll;
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
 
         @media(min-width: 1100px) {
             align-items: center;
@@ -47,52 +44,21 @@ export const Menu = styled.header`
         }
     }
 
-    .header-buttons::-webkit-scrollbar-track {
-        background-color: #ddd;
-        height: 4px;
-    }
-
-    .header-buttons::-webkit-scrollbar-track {
-        background-color: #ddd;
-        height: 4px;
-    }
-
-    .header-buttons::-webkit-scrollbar-thumb {
-        height: 0.37rem;
-        background-color: #ccc;
-        border-radius: 2.5rem;
-    }
-
-    .header-buttons::-webkit-scrollbar {
-        width: 6.25rem;
-        height: 0.62rem;
-    }
-
-    .header-buttons .header-button {
-        margin-right: 1.56rem;
-    }
-
-    .header-buttons .header-button button {
-        width: 9.812rem;
+    .header-buttons a {
+        width: 9.18rem;
         height: 3.18rem;
-        background-color: var(--color-background-white);
-        border-radius: 0.62rem;
-
-        @media(min-width: 1100px) {
-            width: 15.5rem;
-        }
-    }
-
-    .header-buttons .header-button:nth-child(1) button {
         background-color: var(--color-background-yellow);
-
-        @media(min-width: 1100px) {
-            width: 9.18rem;
-        }
+        border-radius: 0.62rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: var(--color-background-header);
+        font: 700 1rem Roboto;
+        text-transform: uppercase;
     }
 
-    .header-buttons .header-button:last-of-type button {
-        margin-right: 1.56rem;
+    .header-buttons a img {
+        margin-right: 0.8rem;
     }
 `;
-

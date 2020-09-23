@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import logo from '../../assets/images/logo.svg';
+import arrow from '../../assets/images/arrow.svg';
+
 import { Menu } from './styles';
 
 const HeaderSingleProduct: React.FC = () => {
@@ -18,25 +21,10 @@ const HeaderSingleProduct: React.FC = () => {
             </div>
 
             <div className="header-buttons">
-                <div className="header-button">
-                    <button>Home</button>
-                </div>
-
-                <div className="header-button">
-                    <button>Home</button>
-                </div>
-
-                <div className="header-button">
-                    <button>Home</button>
-                </div>
-
-                <div className="header-button">
-                    <button>Home</button>
-                </div>
-
-                <div className="header-button">
-                    <button>Home</button>
-                </div>
+                <Link to="/" className="header-button">
+                    <img src={arrow} alt="Cuponeria" />
+                    Home
+                </Link>
             </div>
         </Menu>
     );
