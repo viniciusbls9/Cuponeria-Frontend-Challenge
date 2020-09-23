@@ -9,6 +9,7 @@ export const DiscoverContainer = styled.div<{bgContainer: string}> `
     margin: 0 2rem 2.8rem 2rem;
     padding: 1.25rem 2.43rem;
     border-radius: 0.62rem;
+    box-shadow: 0px 2px 12px var(--color-shadow);
 
     h3 {
         font: 700 1.37rem Roboto;
