@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 
-import Header from './components/Header';
 import GlobalStyles from './assets/styles/global';
+import Home from './pages/Home';
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <Header />
+      <Home />
     </>
   );
 }

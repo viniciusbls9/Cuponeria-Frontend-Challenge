@@ -22,7 +22,7 @@ export const Menu = styled.header`
     }
 
     .header-buttons {
-        padding: 5.12rem 0 1.4rem 0;
+        padding: 4.3rem 0 1.4rem 0;
         padding-left: 1.87rem;
         overflow-x: scroll;
         display: flex;

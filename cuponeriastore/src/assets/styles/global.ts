@@ -9,6 +9,7 @@ export default createGlobalStyle`
     --color-background-yellow: #FAD424;
     --color-background-header: #111111;
     --color-text-white: #ffffff;
+    --color-text-black: #000000;
 }
 
 * {
