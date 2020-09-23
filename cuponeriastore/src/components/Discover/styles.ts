@@ -11,6 +11,10 @@ export const DiscoverContainer = styled.div<{bgContainer: string}> `
     border-radius: 0.62rem;
     box-shadow: 0px 2px 12px var(--color-shadow);
 
+    // @media(min-height: 1100px) {
+    //     flex-direction: row;
+    // }
+
     h3 {
         font: 700 1.37rem Roboto;
         color: var(--color-text-black);

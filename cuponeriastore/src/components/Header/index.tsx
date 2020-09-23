@@ -7,8 +7,14 @@ const Header: React.FC = () => {
     return (
         <Menu>
             <div className="header">
-                <img src={logo} alt="Cuponeria" />
-                <h1>Cuponeria Store</h1>
+                <div className="header-content">
+                    <div className="container-img">
+                        <img src={logo} alt="Cuponeria" />
+                    </div>
+                    <div className="container-title">
+                        <h1>Cuponeria Store</h1>
+                    </div>
+                </div>
             </div>
 
             <div className="header-buttons">

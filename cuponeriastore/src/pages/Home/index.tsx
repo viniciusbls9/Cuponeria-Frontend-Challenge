@@ -11,6 +11,7 @@ const Home: React.FC = () => {
         <Container>
             <Header />
 
+            <h2>Discover</h2>
             <Discover />
             <Featured />
         </Container>
