@@ -77,6 +77,8 @@ export const Menu = styled.header`
         height: 3.18rem;
         background-color: var(--color-background-white);
         border-radius: 0.62rem;
+        font: 700 1rem Roboto;
+        text-transform: uppercase;
 
         @media(min-width: 1100px) {
             width: 15.5rem;

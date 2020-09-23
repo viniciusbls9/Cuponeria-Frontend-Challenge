@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import logo from '../../assets/images/logo.svg';
 import { Menu } from './styles';
 
-const Header: React.FC = () => {
+interface Category {
+    category: string;
+}
+
+const Header: React.FC = (props) => {
+
+    const [categorys, setCategorys] = useState<string[]>([]);
+
+    useEffect(() => {
+        axios.get<Category[]>('https://fakestoreapi.com/products')
+            .then(response => {
+                const categoryData = response.data.map(cat => cat.category);
+                var newCategory = categoryData.filter((este, i) => categoryData.indexOf(este) === i);
+                setCategorys(newCategory);
+            });
+    }, [])
+
     return (
         <Menu>
             <div className="header">
@@ -21,22 +38,11 @@ const Header: React.FC = () => {
                 <div className="header-button">
                     <button>Home</button>
                 </div>
-
-                <div className="header-button">
-                    <button>Home</button>
-                </div>
-
-                <div className="header-button">
-                    <button>Home</button>
-                </div>
-
-                <div className="header-button">
-                    <button>Home</button>
-                </div>
-
-                <div className="header-button">
-                    <button>Home</button>
-                </div>
+                {categorys.map(cat => (
+                    <div className="header-button" key={cat}>
+                        <button>{cat}</button>
+                    </div>
+                ))}
             </div>
         </Menu>
     );
