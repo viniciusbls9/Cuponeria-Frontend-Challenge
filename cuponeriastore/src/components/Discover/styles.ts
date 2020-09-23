@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Container = styled.div<{bgContainer: string}> `
+export const DiscoverContainer = styled.div<{bgContainer: string}> `
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: ${props => (props.bgContainer)};
-    margin: 0 2rem 0 2rem;
+    margin: 0 2rem 2.8rem 2rem;
     padding: 1.25rem 2.43rem;
     border-radius: 0.62rem;
 
@@ -27,5 +27,6 @@ export const Container = styled.div<{bgContainer: string}> `
         color: var(--color-text-white);
         text-decoration: none;
         text-transform: uppercase;
+        border-radius: 0.625rem;
     }
 `;

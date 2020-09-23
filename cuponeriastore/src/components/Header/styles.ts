@@ -22,7 +22,7 @@ export const Menu = styled.header`
     }
 
     .header-buttons {
-        padding: 4.3rem 0 1.4rem 0;
+        padding: 4.3rem 0 1.45rem 0;
         padding-left: 1.87rem;
         overflow-x: scroll;
         display: flex;
@@ -41,14 +41,14 @@ export const Menu = styled.header`
     }
 
     .header-buttons::-webkit-scrollbar-thumb {
-        height: 6px;
+        height: 0.37rem;
         background-color: #ccc;
-        border-radius: 40px;
+        border-radius: 2.5rem;
     }
 
     .header-buttons::-webkit-scrollbar {
-        width: 100px;
-        height: 10px;
+        width: 6.25rem;
+        height: 0.62rem;
     }
 
     .header-buttons .header-button {
