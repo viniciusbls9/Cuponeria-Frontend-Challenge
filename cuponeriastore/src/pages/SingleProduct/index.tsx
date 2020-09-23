@@ -1,10 +1,9 @@
 import React from 'react';
-
-import { ContainerProduct } from './styles';
+import Details from '../../components/Details';
 
 const SingleProduct: React.FC = () => {
   return (
-    <h1>Product</h1>
+    <Details />
   );
 }
 
