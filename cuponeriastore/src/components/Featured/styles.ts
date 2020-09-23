@@ -5,6 +5,10 @@ export const FeaturedContainer = styled.div `
     flex-direction: row;
     overflow-x: scroll;
 
+    // @media(min-width: 1100px) {
+    //     overflow-x: scroll;
+    // }
+
     &::-webkit-scrollbar-track {
         background-color: var(--color-background-yellow);
         height: 4px;
@@ -22,7 +26,7 @@ export const FeaturedContainer = styled.div `
     }
 
     &::-webkit-scrollbar {
-        width: 6.25rem;
+        // width: 6.25rem;
         height: 0.62rem;
     }
 
@@ -48,12 +52,14 @@ export const FeaturedContainer = styled.div `
 
     .card-white {
         background-color: var(--color-background-white);
-        margin-right: 0.9rem;
         cursor: pointer;
+        padding: 10px;
+        height: 315px;
     }
 
     .card-white img {
-        padding: 10px;
+        width: 256px;
+        height: 300px;
 
         @media(min-width: 1100px) {
             max-width: 100%;
@@ -63,7 +69,7 @@ export const FeaturedContainer = styled.div `
     .badge-price {
         display: flex;
         justify-content: flex-end;
-        margin-top: -1.37rem;
+        margin-top: -2.8rem;
         margin-bottom: 0.6rem;
     }
     
@@ -79,10 +85,20 @@ export const FeaturedContainer = styled.div `
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 3.18rem;
+        min-height: 3.18rem;
+        padding: 0 0.8rem 0 0.8rem;
         background-color: var(--color-background-black);
-        color: var(--color-text-white);
         border-radius: 0 0 0.6rem 0.6rem;
+        text-align: center;
+    }
+
+    .card-black p {
+        color: var(--color-text-white);
+        font: 700 1rem Roboto;
+        width: 270px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
 `;

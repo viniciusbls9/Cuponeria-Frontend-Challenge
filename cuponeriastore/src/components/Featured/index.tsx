@@ -3,127 +3,36 @@ import { Link } from 'react-router-dom';
 
 import image3 from '../../assets/images/image3.png';
 
+export interface FeaturedProducts {
+    category: string;
+    description: string;
+    id: number;
+    image: string;
+    price: number;
+    title: string;
+}
 
-import { FeaturedContainer } from './styles';
+interface FeaturedProductsProps {
+    featured: FeaturedProducts;
+}
 
-const Featured: React.FC = () => {
+const Featured: React.FC<FeaturedProductsProps> = ({ featured }) => {
     return (
-        <>
-            <h2>Featured</h2>
-            <FeaturedContainer>
-                <div className="card-container">
-                    <div className="card-white">
-                        <a>
-                            <img src={image3} alt="" />
-                            <div className="badge-price">
-                                <span>R$ 15,99</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="card-black">
-                        <p>Mens Casual Slim Fit</p>
-                    </div>
-                </div>
-
-                <div className="card-container">
-                    <div className="card-white">
-                        <img src={image3} alt="" />
+        // <FeaturedContainer>
+            <div className="card-container">
+                <div className="card-white">
+                    <a>
+                        <img src={featured.image} alt={featured.title} />
                         <div className="badge-price">
-                            <span>R$ 15,99</span>
+                            <span>{featured.price}</span>
                         </div>
-                    </div>
-                    <div className="card-black">
-                        <p>Mens Casual Slim Fit</p>
-                    </div>
+                    </a>
                 </div>
-
-                <div className="card-container">
-                    <div className="card-white">
-                        <img src={image3} alt="" />
-                        <div className="badge-price">
-                            <span>R$ 15,99</span>
-                        </div>
-                    </div>
-                    <div className="card-black">
-                        <p>Mens Casual Slim Fit</p>
-                    </div>
+                <div className="card-black">
+                    <p>{featured.title}</p>
                 </div>
-
-                <div className="card-container">
-                    <div className="card-white">
-                        <img src={image3} alt="" />
-                        <div className="badge-price">
-                            <span>R$ 15,99</span>
-                        </div>
-                    </div>
-                    <div className="card-black">
-                        <p>Mens Casual Slim Fit</p>
-                    </div>
-                </div>
-
-                <div className="card-container">
-                    <div className="card-white">
-                        <img src={image3} alt="" />
-                        <div className="badge-price">
-                            <span>R$ 15,99</span>
-                        </div>
-                    </div>
-                    <div className="card-black">
-                        <p>Mens Casual Slim Fit</p>
-                    </div>
-                </div>
-
-                <div className="card-container">
-                    <div className="card-white">
-                        <img src={image3} alt="" />
-                        <div className="badge-price">
-                            <span>R$ 15,99</span>
-                        </div>
-                    </div>
-                    <div className="card-black">
-                        <p>Mens Casual Slim Fit</p>
-                    </div>
-                </div>
-
-                <div className="card-container">
-                    <div className="card-white">
-                        <img src={image3} alt="" />
-                        <div className="badge-price">
-                            <span>R$ 15,99</span>
-                        </div>
-                    </div>
-                    <div className="card-black">
-                        <p>Mens Casual Slim Fit</p>
-                    </div>
-                </div>
-
-                <div className="card-container">
-                    <div className="card-white">
-                        <img src={image3} alt="" />
-                        <div className="badge-price">
-                            <span>R$ 15,99</span>
-                        </div>
-                    </div>
-                    <div className="card-black">
-                        <p>Mens Casual Slim Fit</p>
-                    </div>
-                </div>
-
-                <div className="card-container">
-                    <div className="card-white">
-                        <img src={image3} alt="" />
-                        <div className="badge-price">
-                            <span>R$ 15,99</span>
-                        </div>
-                    </div>
-                    <div className="card-black">
-                        <p>Mens Casual Slim Fit</p>
-                    </div>
-                </div>
-
-                
-            </FeaturedContainer>
-        </>
+            </div>
+        // </FeaturedContainer>
     );
 }
 
