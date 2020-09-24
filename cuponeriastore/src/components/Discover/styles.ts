@@ -48,13 +48,13 @@ export const DiscoverContainer = styled.div`
         .discover-title h3 {
             font: 700 1.37rem Roboto;
             color: var(--color-text-black);
-            margin-bottom: 2.93rem;
+            margin-bottom: 2.5rem;
+            margin-top: 2.5rem;
             text-align: center;
             
             @media(min-width: 1100px) {
                 width: 390px;
                 text-align: left;
-                margin-bottom: 0;
             }
         }
     

@@ -16,10 +16,7 @@ interface DiscoverProductsProps {
     product: DiscoverProducts;
 }
 
-
 const Discover: React.FC<DiscoverProductsProps> = ({ product }) => {
-
-
     return (
         <>
             <DiscoverContent className="discover-content" bgContainer={product.id === 1 ? "rgba(200,118,118, 0.2)" : "rgba(63,127,203, 0.2)"}>

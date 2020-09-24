@@ -8,6 +8,7 @@ export default createGlobalStyle`
     --color-background-white: #fff;
     --color-background-yellow: #FAD424;
     --color-background-black: #000000;
+    --color-background-red: #FF0000;
     --color-background-header: #111111;
     --color-text-white: #ffffff;
     --color-text-black: #000000;

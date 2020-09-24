@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import image3 from '../../assets/images/image3.png';
-
 export interface FeaturedProducts {
     category: string;
     description: string;
@@ -18,21 +16,23 @@ interface FeaturedProductsProps {
 
 const Featured: React.FC<FeaturedProductsProps> = ({ featured }) => {
     return (
-        // <FeaturedContainer>
-            <div className="card-container">
-                <div className="card-white">
-                    <a>
-                        <img src={featured.image} alt={featured.title} />
-                        <div className="badge-price">
-                            <span>{featured.price}</span>
-                        </div>
-                    </a>
+        <>
+            {/* <Link to={`single-product/${featured.id}`}> */}
+                <div className="card-container">
+                    <div className="card-white">
+                        <Link to={`single-product/${featured.id}`}>
+                            <img src={featured.image} alt={featured.title} />
+                            <div className="badge-price">
+                                <span>{featured.price}</span>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className="card-black">
+                        <p>{featured.title}</p>
+                    </div>
                 </div>
-                <div className="card-black">
-                    <p>{featured.title}</p>
-                </div>
-            </div>
-        // </FeaturedContainer>
+            {/* </Link> */}
+        </>
     );
 }
 

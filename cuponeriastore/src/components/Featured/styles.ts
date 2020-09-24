@@ -5,12 +5,7 @@ export const FeaturedContainer = styled.div `
     flex-direction: row;
     overflow-x: scroll;
 
-    // @media(min-width: 1100px) {
-    //     overflow-x: scroll;
-    // }
-
     &::-webkit-scrollbar-track {
-        background-color: var(--color-background-yellow);
         height: 4px;
     }
 
@@ -21,12 +16,11 @@ export const FeaturedContainer = styled.div `
 
     &::-webkit-scrollbar-thumb {
         height: 0.37rem;
-        background-color: var(--color-background-yellow);
+        background-color: var(--color-background-red);
         border-radius: 2.5rem;
     }
 
     &::-webkit-scrollbar {
-        // width: 6.25rem;
         height: 0.62rem;
     }
 
@@ -36,10 +30,7 @@ export const FeaturedContainer = styled.div `
         background-color: #fff;
         margin-right: 1.7rem;
         margin-bottom: 1.7rem;
-
-        @media(min-width: 1100px) {
-            max-width: 15.75rem;
-        }
+        max-width: 15.75rem;
     }
 
     .card-container:first-of-type {
@@ -60,10 +51,7 @@ export const FeaturedContainer = styled.div `
     .card-white img {
         width: 256px;
         height: 300px;
-
-        @media(min-width: 1100px) {
-            max-width: 100%;
-        }
+        max-width: 100%;
     }
 
     .badge-price {
@@ -90,6 +78,7 @@ export const FeaturedContainer = styled.div `
         background-color: var(--color-background-black);
         border-radius: 0 0 0.6rem 0.6rem;
         text-align: center;
+
     }
 
     .card-black p {

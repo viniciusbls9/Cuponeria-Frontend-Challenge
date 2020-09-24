@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const DiscoverContainer = styled.div`
+export const DetailsContainer = styled.div`
 
     @media(min-width: 1100px) {
         display: flex;

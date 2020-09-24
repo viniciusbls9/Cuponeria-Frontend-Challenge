@@ -8,7 +8,7 @@ function Routes() {
     return (
         <BrowserRouter>
             <Route path="/" exact component={Home} />
-            <Route path="/single-product/:id" exact component={SingleProduct} />
+            <Route path="/single-product/:productid" exact component={SingleProduct} />
         </BrowserRouter>
     );
 }

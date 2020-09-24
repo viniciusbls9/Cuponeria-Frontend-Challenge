@@ -9,8 +9,6 @@ import { Container } from './styles';
 import { DiscoverContainer } from '../../components/Discover/styles';
 import { FeaturedContainer } from '../../components/Featured/styles';
 
-
-
 const Home: React.FC = () => {
 
     const [discoverProducts, setDiscoverProducts] = useState([]);
@@ -24,11 +22,9 @@ const Home: React.FC = () => {
     }, []);
 
     useEffect(() => {
-        axios.get('https://fakestoreapi.com/products?limit=8')
+        axios.get('https://fakestoreapi.com/products/')
             .then(response => {
-                let featuredProducts = response.data;
-                // var newCategory = featuredProducts.filter((este, i) => featuredProducts.indexOf(este) === i);
-                console.log(featuredProducts);
+                // let featuredProducts = response.data;
                 setFeaturedProducts(response.data);
             });
     }, []);
