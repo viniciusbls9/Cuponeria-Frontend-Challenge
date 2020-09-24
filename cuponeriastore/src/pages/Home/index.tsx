@@ -9,30 +9,41 @@ import { Container } from './styles';
 import { DiscoverContainer } from '../../components/Discover/styles';
 import { FeaturedContainer } from '../../components/Featured/styles';
 
+
 const Home: React.FC = () => {
 
     const [discoverProducts, setDiscoverProducts] = useState([]);
     const [featuredProducts, setFeaturedProducts] = useState([]);
+    const [category, setCategory] = useState<string>('');
 
     useEffect(() => {
-        axios.get('https://fakestoreapi.com/products?limit=2')
-            .then(response => {
-                setDiscoverProducts(response.data);
-            });
+        axios.get('https://fakestoreapi.com/products?limit=2').then(response => {
+            setDiscoverProducts(response.data);
+        });
     }, []);
 
     useEffect(() => {
-        axios.get('https://fakestoreapi.com/products/')
-            .then(response => {
-                // let featuredProducts = response.data;
+        axios.get('https://fakestoreapi.com/products/').then(response => {
+            setFeaturedProducts(response.data);
+        });
+    }, []);
+
+    useEffect(() => {
+        if (category !== '') {
+            axios.get(`https://fakestoreapi.com/products/category/${category}`).then(response => {
                 setFeaturedProducts(response.data);
             });
-    }, []);
+        } else {
+            axios.get(`https://fakestoreapi.com/products/`).then(response => {
+                setFeaturedProducts(response.data);
+            });
+        }
+    }, [category]);
 
 
     return (
         <Container>
-            <Header />
+            <Header filterCategory={setCategory} />
 
             <h2>Discover</h2>
             <DiscoverContainer>

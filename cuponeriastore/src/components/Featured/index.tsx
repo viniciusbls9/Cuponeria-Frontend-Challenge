@@ -17,21 +17,19 @@ interface FeaturedProductsProps {
 const Featured: React.FC<FeaturedProductsProps> = ({ featured }) => {
     return (
         <>
-            {/* <Link to={`single-product/${featured.id}`}> */}
-                <div className="card-container">
-                    <div className="card-white">
-                        <Link to={`single-product/${featured.id}`}>
-                            <img src={featured.image} alt={featured.title} />
-                            <div className="badge-price">
-                                <span>{featured.price}</span>
-                            </div>
-                        </Link>
-                    </div>
-                    <div className="card-black">
-                        <p>{featured.title}</p>
-                    </div>
+            <div className="card-container">
+                <div className="card-white">
+                    <Link to={`single-product/${featured.id}`}>
+                        <img src={featured.image} alt={featured.title} />
+                        <div className="badge-price">
+                            <span>{featured.price}</span>
+                        </div>
+                    </Link>
                 </div>
-            {/* </Link> */}
+                <div className="card-black">
+                    <p>{featured.title}</p>
+                </div>
+            </div>
         </>
     );
 }

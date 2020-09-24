@@ -8,9 +8,13 @@ interface Category {
     category: string;
 }
 
-const Header: React.FC = () => {
+interface Props {
+    filterCategory: (value: string) => void;
+  }
 
-    const [categorys, setCategorys] = useState<string[]>([]);
+const Header: React.FC<Props> = ({ filterCategory }) => {
+
+    const [categorys, setCategorys] = useState<string[]>([]); 
 
     useEffect(() => {
         axios.get<Category[]>('https://fakestoreapi.com/products')
@@ -19,7 +23,7 @@ const Header: React.FC = () => {
                 var newCategory = categoryData.filter((este, i) => categoryData.indexOf(este) === i);
                 setCategorys(newCategory);
             });
-    }, []);
+    }, [filterCategory]);
 
     return (
         <Menu>
@@ -40,7 +44,7 @@ const Header: React.FC = () => {
                 </div>
                 {categorys.map(cat => (
                     <div className="header-button" key={cat}>
-                        <button>{cat}</button>
+                        <button onClick={() => filterCategory(cat)}>{cat}</button>
                     </div>
                 ))}
             </div>

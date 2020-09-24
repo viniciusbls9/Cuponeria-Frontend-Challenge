@@ -46,12 +46,14 @@ export const FeaturedContainer = styled.div `
         cursor: pointer;
         padding: 10px;
         height: 315px;
+        overflow: hidden;
     }
 
     .card-white img {
         width: 256px;
         height: 300px;
         max-width: 100%;
+
     }
 
     .badge-price {
