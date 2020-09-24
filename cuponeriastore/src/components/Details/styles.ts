@@ -18,9 +18,14 @@ export const DetailsContainer = styled.div`
 
         img {
             width: 13.5625rem;
+            transition: all .2s;
 
             @media(min-width: 1100px) {
                 width: 20rem;
+            }
+
+            &:hover {
+                box-shadow: 10px 6px 12px 2px var(--color-shadow);
             }
         }
 
