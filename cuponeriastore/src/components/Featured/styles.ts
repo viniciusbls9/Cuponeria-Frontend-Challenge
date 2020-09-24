@@ -54,8 +54,8 @@ export const FeaturedContainer = styled.div `
     }
 
     .card-white img {
-        width: 256px;
-        height: 300px;
+        width: 16rem;
+        height: 18.75rem;
         max-width: 100%;
     }
 

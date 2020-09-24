@@ -16,17 +16,28 @@ const Home: React.FC = () => {
     const [featuredProducts, setFeaturedProducts] = useState([]);
     const [category, setCategory] = useState<string>('');
 
+    /**
+     * Chamada a API para usar no componente Discover
+     */
     useEffect(() => {
         axios.get('https://fakestoreapi.com/products?limit=2').then(response => {
             setDiscoverProducts(response.data);
         });
     }, []);
 
+    /**
+     * Chamada a API para usar no componente Featured
+     */
+
     useEffect(() => {
         axios.get('https://fakestoreapi.com/products/').then(response => {
             setFeaturedProducts(response.data);
         });
     }, []);
+
+    /**
+     * Chamada a API para filtrar os produtos no componente Featured
+     */
 
     useEffect(() => {
         if (category !== '') {

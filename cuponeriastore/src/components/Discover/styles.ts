@@ -28,8 +28,8 @@ export const DiscoverContainer = styled.div`
         }
 
         img {
-            width: 256px;
-            height: 256px;
+            width: 16rem;
+            height: 16rem;
             transition: all .2s;
 
             &:hover {
