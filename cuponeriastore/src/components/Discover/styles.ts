@@ -30,6 +30,12 @@ export const DiscoverContainer = styled.div`
         img {
             width: 256px;
             height: 256px;
+            transition: all .2s;
+
+            &:hover {
+                border-bottom: 1px solid var(--color-bg-badge);
+                box-shadow: 10px 2px 12px var(--color-shadow);
+            }
         }
 
         .discover-title {

@@ -79,6 +79,7 @@ export const Menu = styled.header`
         border-radius: 0.62rem;
         font: 700 1rem Roboto;
         text-transform: uppercase;
+        cursor: pointer;
 
         @media(min-width: 1100px) {
             width: 15.5rem;
