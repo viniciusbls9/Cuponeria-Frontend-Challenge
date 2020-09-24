@@ -65,7 +65,6 @@ export const DiscoverContainer = styled.div`
         }
     
         a {
-            // background-color: #ee0;
             width: 7.68rem;
             height: 3.31rem;
             display: flex;
@@ -92,9 +91,6 @@ export const DiscoverContainer = styled.div`
         }
     }
 
-`;
-
-export const LinkTo = styled(Link)<{ bgColor: string }> `
 `;
 
 export const DiscoverContent = styled.div<{ bgContainer: string }> `
