@@ -35,10 +35,4 @@ body {
     background-color: var(--color-background-body);
 }
 
-/* @media (min-width: 700px) {
-    :root {
-        font-size: 62.5%;
-    }
-} */
-
 `;
