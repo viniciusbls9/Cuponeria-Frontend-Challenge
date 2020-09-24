@@ -49,6 +49,7 @@ export const FeaturedContainer = styled.div `
         transition: all .2s;
 
         &:hover {
+            border-bottom: 2px solid var(--color-bg-badge);
             box-shadow: 10px 6px 12px 2px var(--color-shadow);
         }
     }
